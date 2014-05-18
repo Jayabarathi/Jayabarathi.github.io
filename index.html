@@ -1,74 +1,264 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+<head>
+<title>Kurukshetra 2015 | The International Techno Management Festival of Anna University Chennai</title>
+<link rel="shortcut icon" href="http://archive11.kurukshetra.org.in//images/general/icon.ico"/>
+<link href="file:///C:/Users/India/Desktop/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="zoomSlider.js" type="text/javascript"></script>
+<link href="themes/1/zoomslider.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body {
+background-image:url("http://1-background.com/images/black-dreams/black-dreams-in-red-website-background.jpg");
+z-index:10;
+}
+.klogo
+{
+padding-left:35%;
+z-index:5;
+}
+.center
+{
+padding-left:10%;
+box-shadow:0 1px 10px rgba(0,0,0,.5);
+}
+.nav1
+{
+padding-left:15%;
+padding-right:12%; 
+box - shadow:0 1px 10px rgba(0,0,0,.5);
+}
+</style>
+<script type="text/javascript">
+var arr = [];
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jayabarathi.github.io : " />
+arr[0]= new Image();
+arr[0].src = "http://archive11.kurukshetra.org.in/images/sponsors/infysec.jpg";
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+arr[1]= new Image();
+arr[1].src = "http://archive11.kurukshetra.org.in/images/sponsors/wipro.jpg";
+var i=0;
 
-    <title>Jayabarathi.github.io</title>
-  </head>
+function slide(){
+ document.getElementById("image1").src= arr[i].src;
+ i++;
+ if(i==arr.length){
+  i=0;
+ }
+ setTimeout(function(){ slide(); },2000);
+}
 
-  <body>
+</script>
+</head>
+<body  onLoad="slide('image1',arr);">
+<div id=klogo class="row">
+	<div class="col-lg-9">
+		<img class="klogo" src="http://archive11.kurukshetra.org.in/images/general/klogo.png"/>
+	</div>
+	<div class="col-lg-3">
+		<img style="padding-left:0% ;padding-top:10px; height:50px" src="k-bg\ceg1.png"/>
+	</div>
+</div>
+<div class="nav1" style="padding-left:10%;">
+	<nav class="navbar navbar-default center" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand active" style="color:#901;" href="#">Home</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav" >
+				<li class="siding-element"><a href="#">Events</a></li>
+				<li class="siding-element"><a href="#">Lectures</a></li>
+				<li><a href="#">Workshops</a></li>
+				<li><a href="#">K!arnival</a></li>
+				<li><a href="#">Sponsers</a></li>
+				<li><a href="#">Forum</a></li>
+				<li><a href="#">Hospitality</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div style="padding-left:10%;padding-right:10%;">
+	<table>
+		<tr>
+			<td width=25% height=20%>
+				<div id="unesco">
+					<a href="http://www.unesco.org/" target="_blank"><img style="z-index:5;" src="http://archive11.kurukshetra.org.in/images/general/unesco.jpg" alt="UNESCO Patronage"/></a>
+				</div>
+			</td>
+			<td width=25% height=20%>
+				<div>
+					<h5 style="color:White; text-align:center;"><strong> Updates</strong></h5><p style="text-align:center ;color:pink"> <strong>K! 2015</strong>-This year K! was a grand success.Thanks to all participants !</p>
+				</div>
+			</td> 
+			<td width=25% height=10%>
+				<div>
+					<h5 style="color:White; text-align:center;"><strong>Our Sponsors</strong></h5>
+						<div id="img"><img id="image1"style="padding-left:20%;" /></div>
+				</div>
+		
+			</td>
+			<td width=25% height=20% style="padding-left:4%;">
+				<div>
+					<form role="form">
+						<input type="text" class="form-control" id="user" placeholder="Username" style="width:150px; font-size:12px; min-height:10px; margin-bottom:5px; color:#888;">
+			
+						<input type="password" class="form-control" id="pwd" placeholder="Password" style="width:150px; font-size:12px; min-height:10px; margin-bottom:5px; color:#888;">
+						<a><img src="http://archive11.kurukshetra.org.in/images/general/forgotpassword.gif" title="Forgot Password" alt="FP" style="border:0"></a>
+						<br/>
+						<button type="button" class="btn btn-primary btn-sm ">login</button>
+						<button type="button" class="btn btn-primary btn-sm ">New user?</button>
+					</form>
+				</div>
+			</td>	
+		</tr>
+	</table>
+</div>
+<br>
+<div>
+<div class="row">
+	<div class="col-lg-8">
+		<div id="wrapper" style="z-index:5;padding-left:12%;">
+                    <div id="zoom-slider">
+					    <img src="images/1.jpg" />
+                        <img src="images/2.jpg" />
+                        <img src="images/3.jpg" />
+                        <img src="images/4.jpg" />
+                        <img src="images/6.jpg" />
+                    </div>
+                    <!--The following are custom navigation buttons-->
+                  <div style="width:500px;background:Black;padding: 4px 8px 8px 12px; border-radius:0 0 6px 6px; text-align:right;">
+                        <div style="float:left;">
+                            <a onclick="zoomSlider.previous()" class="navPrev"></a>
+                            <a id='auto' onclick="switchAutoAdvance()"></a>
+                            <a onclick="zoomSlider.next()" class="navNext"></a>
+                        </div>            
+                    </div>
+                    <!--The following are HTML captions-->        
+                    </div>        
+		
+	</div>
+	<div class="col-lg-3">
+		<div class="list-group" style="padding-left:20%;">
+					<a href="#" class="list-group-item header" ><h4 style="color:#901; text-decoration:underline;"><center><strong>Quick Links</strong></center></h4></a>
+					<a href="#" class="list-group-item "><center>XCEED</center></a>
+					<a href="#" class="list-group-item"><center>Student Ambassador</center></a>
+					<a href="#" class="list-group-item"><center>Accomodation</center></a>
+					<a href="#" class="list-group-item"><center>Schedule</center></a>
+					<a href="#" class="list-group-item"><center>I am a CEGian</center></a>
+					<a href="#" class="list-group-item"><center>Promo Video</center></a>
+					<a href="#" class="list-group-item"><center>K! Android App</center></a>
+					<a href="#" class="list-group-item" style="color:#901;text-decoration:underline;"><center>Follow Us</center>
+						<div align="center" style="padding-top:2px;">
+							<table>
+								<tbody>
+									<tr>
+										<td><img height=30px src="http://archive11.kurukshetra.org.in/images/feeds/tweety.png"</td>
+										<td><img height=30px src="http://archive11.kurukshetra.org.in/images/feeds/facebook.png"</td>
+										<td><img height=30px src="http://archive11.kurukshetra.org.in/images/feeds/orkut.png"</td>
+										<td><img height=30px src="http://archive11.kurukshetra.org.in/images/feeds/buzz.png"</td>
+									</tr>
+								<tbody>
+							</table>
+						</div>
+					</a>
+				</div>
+			</div>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Jayabarathi">View on GitHub</a>
+</div>
+<div class="row">
+	<div class="col-lg-9">
+	
+		<a style="color:skyblue;font-size:20px; padding-left:12%;text-decoration:underline;"><strong>Welcome to Kurukshetra-2015!</strong></a>
+		<p style="color:pink;font-size:15px; padding-left:20%;padding-top:2px;padding-right:5%;">The festival is conducted for four days and is aimed at bringing about a higher level of interaction between the industry and academia, and also among the students of different colleges. Kurukshetra began in 2007 and is the first student organised event in India to have the patronage of UNESCO.</p>
+	</div>
+</div>
+<br>
+<div style="padding-left:10%;">
+	<h3 style="color:blue">K! wik navi</h3>
+	<h4 style="color:skyblue;">k!Events</h4>
+	<div class="row">
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/engineering2.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/online1.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/management1.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/f2.jpg"/>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/wildlife1.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/ros1.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/robotics1.jpg"/>
+		</div>
+		<div class="col-lg-3">
+			<img src="http://archive11.kurukshetra.org.in/images/newhome/bottom/fun2.jpg"/>
+		</div>
+	</div>
+<br>
+</div>
+<p style="color:white; padding-left:10%;">For any queries mail to :</p>
+<a style="color:pink;text-decoration:underline; padding-left:10%;" href>infodesk@kurukshetra.org.in</a>
+<br>
+<br>
+<div id="footerlinks">
+<div class="row">
+<div class="col-lg-6">
+<div style="padding-left:20%">
+<a  id="footerlinkarchive">Archives</a>
+<a style="padding-left:30px"  href="http://archive11.kurukshetra.org.in/gallery">Gallery</a></li>
+<a style="padding-left:30px;" href="http://archive11.kurukshetra.org.in/feedback">Feedback</a></li>
+<a style="padding-left:30px;" href="http://archive11.kurukshetra.org.in/logo">Logo</a></li>
+<a style="padding-left:30px;" href="http://blog.kurukshetra.org.in" target="_blank">K! Blog</a></li>
+<a style="padding-left:30px;" href="http://archive11.kurukshetra.org.in/media/">Media</a></li>
+</div>
+</div>
+<div class="col-lg-6">
+<div id="footerright" style="color:white;padding-left:20%">
+&copy; Kurukshetra 2011 | Best viewed in 
+<a href="http://www.mozilla.com/en-US/firefox/"><img src="http://archive11.kurukshetra.org.in/images/general/logo-firefox.png" title="Mozilla Firefox" pagespeed_url_hash="3692942211"></a>
+<img src="http://archive11.kurukshetra.org.in/images/general/logo-chrome.png" title="Google Chrome" pagespeed_url_hash="215331798">
+<img src="http://archive11.kurukshetra.org.in/images/general/logo-safari.png" title="Safari" pagespeed_url_hash="1342811840">
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+ <script type="text/javascript">
+        //The following script is for custom navigation buttons.
+        function switchAutoAdvance() {
+            zoomSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            if (auto) {
+                var isAutoPlay = zoomSlider.getAuto();
+                auto.className = isAutoPlay ? "navPause" : "navPlay";
+                auto.title = isAutoPlay ? "Pause" : "Play";
+            }
+        }
+        switchPlayPauseClass();
 
-          <h1 id="project_title">Jayabarathi.github.io</h1>
-          <h2 id="project_tagline"></h2>
 
-        </header>
-    </div>
+        //Change the captionEffect. It is recommended to set { captionEffect: "fade" } directly through the zoomSliderOptions in the javascript file instead of using the approach below
+        zoomSlider.changeOptions({ captionEffect: "fade" });
+		
+	
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+    </script>
+</body>
 </html>
+
